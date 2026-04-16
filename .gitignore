@@ -1,0 +1,22 @@
+# Python
+venv/
+.venv/
+myvenv/
+.myvenv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Flask
+instance/
+.env
+
+# Mypy
+.mypy_cache/
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.DS_Store
