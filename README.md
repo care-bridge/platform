@@ -46,10 +46,12 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 1. Make sure you have **Python 3.11+** installed
 2. Download the code
 3. Go to project directory and run:  
-   `python make.py init && python make.py setup`  
-   *This creates a virtual environment + installs all modules*
-4. Then run: `python make.py run`
-5. Open your browser and visit: `http://localhost:5000/`
+   `python make.py init`  
+   *This creates a virtual environment 
+4. Activate the virtual environment *(the last command tells you how when done!)*
+5. Install modules: `python make.py setup`
+6. Then run: `python make.py run`
+7. Open your browser and visit: `http://localhost:5000/`
 
 **Voilà! ⚡**
 
