@@ -1,0 +1,6 @@
+*.html linguist-language=Python
+*.jinja linguist-language=Python
+*.jinja2 linguist-language=Python
+*.css linguist-vendored
+*.js linguist-vendored
+
