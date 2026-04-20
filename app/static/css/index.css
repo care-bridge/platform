@@ -19,6 +19,7 @@ main{
     display: flex;
     flex-direction: column;
     flex: 1 0 auto;
+    background-color: #F8FAFc;
 }
 section{
     display: flex;
