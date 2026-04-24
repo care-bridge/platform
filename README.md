@@ -33,9 +33,9 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 
 | Layer | Technology |
 | :--- | :--- |
-| Frontend | HTMX + Pico.css + JS |
-| Backend | Python + Flask + SQLite |
-| Deployment | Anywhere (Render, PythonAnywhere, VPS) |
+| Frontend | Preact.js + Pico.CSS + Wouter |
+| Backend | Node.js + Express.js + MongoDB Atlas |
+| Deployment | Netlify + ? |
 
 > No build step. No complex tooling. Works on low-end devices.
 
@@ -43,15 +43,8 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 
 ## 💻 Run Locally
 
-1. Make sure you have **Python 3.11+** installed
-2. Download the code
-3. Go to project directory and run:  
-   `python make.py init`  
-   *This creates a virtual environment 
-4. Activate the virtual environment *(the last command tells you how when done!)*
-5. Install modules: `python make.py setup`
-6. Then run: `python make.py run`
-7. Open your browser and visit: `http://localhost:5000/`
+We use **pnpm** for both the frontend and the backend
+
 
 **Voilà! ⚡**
 
