@@ -10,7 +10,6 @@ app.use(cors());
 // import routes 
 import healthCheckRouter from "./routes/healthcheck.route.js"
 import usersRouter from "./routes/users.router.js"
-import errorHandler from "./middleware/errorHandler.js"
 
 // use routes 
 app.use("/health", healthCheckRouter);
