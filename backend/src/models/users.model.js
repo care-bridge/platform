@@ -30,10 +30,10 @@ const usersSchema = new Schema({
     role : {
         type: String, 
         enum : ["admin", "user"],
-        defatult : user,
+        default : "user",
     }
 }, {
     timestamps: true
 });
 
-export const Usersmodel = model("users", usersSchema);
+export const UsersModel = model("users", usersSchema);
