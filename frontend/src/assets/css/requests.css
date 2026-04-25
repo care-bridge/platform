@@ -105,6 +105,36 @@ section#right article header .inner-1 {
   font-weight: bold;
   color: white;
 }
+
 .hide-arrow {
   display: none;
+}.profile-wrapper {
+  position: relative;
 }
+
+.profile-icon {
+  cursor: pointer;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  min-width: 120px;
+  z-index: 100;
+}
+
+.dropdown.show {
+  display: block;
+}
+
+.dropdown button {
+  width: 100%;
+  margin-top: 5px;
+}
+
