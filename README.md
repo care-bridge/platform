@@ -1,6 +1,6 @@
 # CareBridge 💚
 
-> *Healthcare for everyone — online, offline, or in need*
+> *Healthcare for everyone — regardless of ability to pay*
 
 ![Cover Image](cover.png)
 
@@ -33,25 +33,45 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 
 | Layer | Technology |
 | :--- | :--- |
-| Frontend | HTMX + Pico.css + JS |
-| Backend | Python + Flask + SQLite |
-| Deployment | Anywhere (Render, PythonAnywhere, VPS) |
+| Frontend | Preact.js + Pico.css + Wouter |
+| Backend | Node.js + Express.js + MongoDB Atlas |
+| Deployment | Netlify (frontend) + ? (backend) |
 
-> No build step. No complex tooling. Works on low-end devices.
+> Lightweight, fast, and works on low-end devices.
+
+---
+
+## What Changed
+
+| Old | New |
+| :--- | :--- |
+| Python/Flask/SQLite | Node.js/Express/MongoDB Atlas |
+| Vanilla JS + HTMX | Preact.js + Wouter |
+| Single repo structure | Split `frontend/` + `backend/` |
+| `make.py` | `pnpm dev` commands |
+| Removed `requirements.txt` | Added `package.json` references |
+
+Ready to ship 🚀
 
 ---
 
 ## 💻 Run Locally
 
-1. Make sure you have **Python 3.11+** installed
-2. Download the code
-3. Go to project directory and run:  
-   `python make.py init`  
-   *This creates a virtual environment 
-4. Activate the virtual environment *(the last command tells you how when done!)*
-5. Install modules: `python make.py setup`
-6. Then run: `python make.py run`
-7. Open your browser and visit: `http://localhost:5000/`
+We use **pnpm** for both frontend and backend.
+
+**Frontend:**
+```bash
+cd frontend
+pnpm install
+pnpm dev
+```
+
+**Backend:**
+```bash
+cd backend
+pnpm install
+pnpm dev
+```
 
 **Voilà! ⚡**
 
@@ -59,19 +79,31 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 
 ## 📁 Project Structure
 
-```
+```bash
 CareBridge/
-├── app/
-│ ├── routes/ # Flask routes
-│ ├── templates/ # HTML + Alpine.js
-│ ├── models.py # SQLite database
-│ └── __init__.py
-├── static/
-│ └── css/ # Pico.css + custom
+├── frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── App.jsx
+│ │ └── main.jsx
+│ ├── index.html
+│ ├── package.json
+│ └── pnpm-lock.yaml
+├── backend/
+│ ├── src/
+│ │ ├── app.js
+│ │ ├── config.js
+│ │ ├── index.js
+│ │ ├── controllers/
+│ │ ├── db/
+│ │ ├── routes/
+│ │ └── utils/
+│ ├── package.json
+│ └── pnpm-lock.yaml
 ├── docs/
-│ └── How-It-Works.md # Detailed scenarios
-├── make.py # CLI helper
-├── requirements.txt
+│ ├── How-It-Works.md
+│ └── CONTRIBUTING.md
 └── README.md
 ```
 
