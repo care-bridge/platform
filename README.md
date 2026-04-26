@@ -33,9 +33,9 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 
 | Layer | Technology |
 | :--- | :--- |
-| Frontend | Preact.js + Pico.css + Wouter |
-| Backend | Node.js + Express.js + MongoDB Atlas |
-| Deployment | Netlify (frontend) + ? (backend) |
+| Frontend | 11ty + Pico.css + HTMX |
+| Backend | FastAPI (Python) + SQLite |
+| Deployment | Netlify (frontend) + Render (backend) |
 
 > Lightweight, fast, and works on low-end devices.
 
@@ -45,11 +45,10 @@ For **detailed scenarios** (patient direct, hospital flow, donor verification), 
 
 | Old | New |
 | :--- | :--- |
-| Python/Flask/SQLite | Node.js/Express/MongoDB Atlas |
-| Vanilla JS + HTMX | Preact.js + Wouter |
+| Flask | FastAPI |
+| Preact/Vanilla HTML | 11ty |
 | Single repo structure | Split `frontend/` + `backend/` |
 | `make.py` | `pnpm dev` commands |
-| Removed `requirements.txt` | Added `package.json` references |
 
 Ready to ship 🚀
 
@@ -57,7 +56,7 @@ Ready to ship 🚀
 
 ## 💻 Run Locally
 
-We use **pnpm** for both frontend and backend.
+We use **pnpm** for the frontend and **pip** for the backend.
 
 **Frontend:**
 ```bash
@@ -69,8 +68,8 @@ pnpm dev
 **Backend:**
 ```bash
 cd backend
-pnpm install
-pnpm dev
+pip install -r requirements.txt
+uvicorn main:app --reload
 ```
 
 **Voilà! ⚡**
@@ -82,25 +81,21 @@ pnpm dev
 ```bash
 CareBridge/
 ├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ ├── pages/
-│ │ ├── App.jsx
-│ │ └── main.jsx
-│ ├── index.html
-│ ├── package.json
-│ └── pnpm-lock.yaml
+│   ├── _components/
+│   ├── content/
+│   ├── css/
+│   ├── _data/
+│   ├── fonts/
+│   ├── icons/
+│   ├── _includes/
+│   ├── js/
+│   ├── node_modules/
+│   ├── package.json
+│   └── pnpm-lock.yaml
 ├── backend/
-│ ├── src/
-│ │ ├── app.js
-│ │ ├── config.js
-│ │ ├── index.js
-│ │ ├── controllers/
-│ │ ├── db/
-│ │ ├── routes/
-│ │ └── utils/
-│ ├── package.json
-│ └── pnpm-lock.yaml
+│ ├── main.py
+│ ├── database.db 
+│ └── requirements.txt
 ├── docs/
 │ ├── How-It-Works.md
 │ └── CONTRIBUTING.md

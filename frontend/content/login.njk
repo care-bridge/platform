@@ -1,0 +1,32 @@
+---
+layout: base.njk
+css:
+  - '/css/auth-forms.css'
+---
+
+<h1>Welcome Back!</h1>
+
+<section>
+  <form>
+    <label>
+      Email
+      <input type="email" name="email" required aria-required="true" autocomplete="email" />
+    </label>
+
+    <label>
+      Password
+      <input
+        type="password"
+        name="password"
+        required
+        autocomplete="current-password"
+        aria-required="true"
+      />
+    </label>
+    
+    <input type="submit" value="Login" />
+  </form>
+  <a href="/contact">Forgot your Password or Lost Email?</a>
+  <br />
+  <a href="/signup">Don't have an account? Register now for free!</a>
+</section>
